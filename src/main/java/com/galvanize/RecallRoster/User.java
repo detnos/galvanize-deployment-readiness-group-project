@@ -1,5 +1,7 @@
 package com.galvanize.RecallRoster;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -12,13 +14,15 @@ public class User {
     private Long id;
     String firstName;
     String lastName;
-    Integer edipi;
+    Long edipi;
     String unit;
     String base;
     String afsc;
     Integer roleId;
     Integer roleHeiararchy;
+    String phone;
     String email;
+    @JsonIgnore
     String password;
     String grade;
 
@@ -46,11 +50,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public Integer getEdipi() {
+    public Long getEdipi() {
         return edipi;
     }
 
-    public void setEdipi(Integer edipi) {
+    public void setEdipi(Long edipi) {
         this.edipi = edipi;
     }
 
@@ -92,6 +96,14 @@ public class User {
 
     public void setRoleHeiararchy(Integer roleHeiararchy) {
         this.roleHeiararchy = roleHeiararchy;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getEmail() {

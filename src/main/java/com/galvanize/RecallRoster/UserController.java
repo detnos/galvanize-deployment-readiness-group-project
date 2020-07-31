@@ -61,6 +61,9 @@ public class UserController {
         if (user.getRoleHeiararchy() != null) {
             originalUser.setRoleHeiararchy(user.getRoleHeiararchy());
         }
+        if (user.getPhone() != null) {
+            originalUser.setPhone(user.getPhone());
+        }
         if (user.getEmail() != null) {
             originalUser.setEmail(user.getEmail());
         }
